@@ -125,7 +125,7 @@ body {
     body {
         height: auto; /* Allow height to expand for tablets */
         flex-direction: column;
-        padding: 1.5rem;
+        padding: .5rem;
     }
 
     .launch-container {
@@ -158,12 +158,38 @@ body {
     .stay {
         align-items: center;
     }
+    .countdown {
+        order: 2;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1.5rem; /* Add more padding to the countdown section */
+        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+    }
+
+    .countdown-item {
+        padding: 1.2rem; /* Increase padding for the countdown items */
+    }
+
+    .countdown-item span {
+        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .countdown-item p {
+        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        color: #666;
+    }
 }
 
 @media (max-width: 768px) {
     body {
         height: auto; 
-        padding: 1.5rem;
+        padding: .5rem;
     }
 
     .company-name {
@@ -194,12 +220,78 @@ body {
     .stay {
         align-items: center;
     }
+    .countdown {
+        order: 2;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1.5rem; /* Add more padding to the countdown section */
+        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+
+    }
+
+    .countdown-item {
+        padding: 1.2rem; /* Increase padding for the countdown items */
+    }
+
+    .countdown-item span {
+        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .countdown-item p {
+        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        color: #666;
+    }
+    
 }
 
 @media (max-width: 480px) {
     body {
         height: auto; /* Allow height to expand for mobile */
-        padding: 1rem;
+        padding: .3rem;
+        flex-direction: column;
+    }
+
+    .launch-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .launch-image {
+        order: 1; 
+        margin-bottom: 1rem;
+    }
+
+    .countdown {
+        order: 2;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1.5rem; /* Add more padding to the countdown section */
+        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        border-radius: 10px;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .countdown-item {
+        padding: 1.2rem; /* Increase padding for the countdown items */
+    }
+
+    .countdown-item span {
+        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .countdown-item p {
+        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        color: #666;
     }
 
     .company-name {
@@ -214,23 +306,12 @@ body {
         font-size: 0.8rem;
     }
 
-    .countdown-item {
-        padding: 0.6rem;
-    }
-
-    .countdown-item span {
-        font-size: 1.2rem;
-    }
-
-    .countdown-item p {
-        font-size: 0.6rem;
-    }
-
     .launch-button {
-        padding: 0.5rem;
-        font-size: 0.8rem;
+        padding: 0.6rem;
+        font-size: 0.9rem;
     }
 }
+
 
 @media (max-width: 320px) {
     body {
@@ -262,4 +343,5 @@ body {
         padding: 0.4rem;
         font-size: 0.7rem;
     }
+    
 }

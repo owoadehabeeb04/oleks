@@ -1,5 +1,5 @@
 const countdown = () => {
-    const launchDate = new Date("Feb 3, 2025 23:59:59").getTime();
+    const launchDate = new Date("Feb 4, 2025 23:59:59").getTime();
     const now = new Date().getTime();
     const gap = launchDate - now;
 
