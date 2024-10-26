@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Default for larger screens */
+}
+
+.launch-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.launch-content {
+    text-align: left;
+    flex: 1;
+}
+
+.company-name {
+    max-width: 100%;
+    width: 35%; /* Default width for larger screens */
+    margin-bottom: 20px;
+    transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+
+.launch-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.launch-subtext {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stay {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.launch-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2871F9, #3e7cf1);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    text-align: center;
+}
+
+.launch-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px #2871F9;
+}
+
+.launch-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px #2871F9;
+}
+
+.countdown-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f7fafc;
+    border-radius: 6px;
+    min-width: 70px;
+}
+
+.countdown-item span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.countdown-item p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.launch-image img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Additional Styles */
+.notify-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    body {
+        height: auto; /* Allow height to expand for tablets */
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .launch-container {
+        flex-direction: column;
+        padding: 1.5rem;
+        align-items: center;
+    }
+
+    .launch-content {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .company-name {
+        width: 50%; 
+    }
+
+    .launch-title {
+        font-size: 2rem;
+    }
+
+    .launch-subtext {
+        font-size: 1rem;
+    }
+
+    .countdown {
+        justify-content: center;
+    }
+
+    .stay {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto; 
+        padding: 1.5rem;
+    }
+
+    .company-name {
+        width: 50%; 
+    }
+
+    .launch-title {
+        font-size: 1.5rem;
+    }
+
+    .launch-subtext {
+        font-size: 0.9rem;
+    }
+
+    .countdown-item span {
+        font-size: 1.5rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.7rem;
+    }
+
+    .launch-button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .stay {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: auto; /* Allow height to expand for mobile */
+        padding: 1rem;
+    }
+
+    .company-name {
+        width: 60%; /* Adjusted for mobile */
+    }
+
+    .launch-title {
+        font-size: 1.4rem;
+    }
+
+    .launch-subtext {
+        font-size: 0.8rem;
+    }
+
+    .countdown-item {
+        padding: 0.6rem;
+    }
+
+    .countdown-item span {
+        font-size: 1.2rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.6rem;
+    }
+
+    .launch-button {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        height: auto; /* Allow height to expand for very small devices */
+        padding: 1rem;
+    }
+
+    .company-name {
+        width: 70%; /* Adjusted for very small devices */
+    }
+
+    .launch-title {
+        font-size: 1.2rem;
+    }
+
+    .launch-subtext {
+        font-size: 0.7rem;
+    }
+
+    .countdown-item span {
+        font-size: 1rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.5rem;
+    }
+
+    .launch-button {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+    }
+}
