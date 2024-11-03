@@ -15,10 +15,10 @@ body {
 .launch-container {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: 2.5rem;
     gap: 2rem;
     max-width: 1300px;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 10px;
     height: fit-content;
 }
@@ -26,6 +26,9 @@ body {
 .launch-content {
     text-align: left;
     flex: 1;
+}
+.mobile-title {
+    display: none; /* Hide on desktop */
 }
 
 .company-name {
@@ -36,14 +39,14 @@ body {
 }
 
 .launch-title {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 0.5rem;
 }
 
 .launch-subtext {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     margin-bottom: 1rem;
 }
@@ -60,13 +63,20 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.launch-highlights{
+    font-size: 14px;
+}
 
+.olerks{
+    width: 200px;
+    margin-bottom: 10px;
+}
 .launch-button {
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
-    background: linear-gradient(135deg, #2871F9, #3e7cf1);
+    background: linear-gradient(135deg, rgb(203, 40, 203), hsl(300, 100%, 25%));
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -79,12 +89,12 @@ body {
 
 .launch-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 16px #2871F9;
+    box-shadow: 0 8px 16px rgb(103, 10, 103);
 }
 
 .launch-button:active {
     transform: translateY(1px);
-    box-shadow: 0 4px 8px #2871F9;
+    box-shadow: 0 4px 8px purple;
 }
 
 .countdown-item {
@@ -119,18 +129,90 @@ body {
     color: #666;
     margin-bottom: 1rem;
 }
+.launch-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    /* gap: 2rem; */
+    /* max-width: 1300px; */
+    /* width: 100%; */
+    /* border-radius: 10px; */
+    height: fit-content;
+}
+
+/* Content Section: 50% Width */
+.launch-content {
+    text-align: left;
+    flex: 1;
+    width: 100%; /* Ensures the content takes 50% of the container */
+    opacity: 0; /* Initial state for fade-in effect */
+    animation: fadeIn 2s forwards;
+}
+
+.launch-video {
+    width: 60%;
+    height: max-content; /* Restricts the video to 50% of the container */
+}
+
+.launch-video video {
+    width: 100%; /* Ensures the video scales to fit within its container */
+    border-radius: 10px;
+}
+
+.launch-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Animation for Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Typewriter Effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #333;
+    width: 0;
+    animation: typewriter 4s steps(40, end) forwards;
+}
 
 /* Responsive design */
 @media (max-width: 992px) {
     body {
-        height: auto; /* Allow height to expand for tablets */
+        height: 100%; 
         flex-direction: column;
         padding: .5rem;
     }
 
     .launch-container {
         flex-direction: column;
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
         align-items: center;
     }
 
@@ -184,16 +266,30 @@ body {
         font-size: 1.2rem; /* Increase text size below the countdown numbers */
         color: #666;
     }
+    .launch-button {
+        width: 100%; /* Full width */
+        padding: 0.6rem; /* Adjusted padding */
+        font-size: 0.9rem;
+        border-radius: 4px;
+
+    }
 }
 
 @media (max-width: 768px) {
     body {
-        height: auto; 
+        height: max-content; 
         padding: .5rem;
     }
 
     .company-name {
         width: 50%; 
+    }
+    .desktop-title {
+        display: none; /* Hide on mobile */
+    }
+
+    .mobile-title {
+        display: block; /* Show on mobile */
     }
 
     .launch-title {
@@ -206,15 +302,118 @@ body {
 
     .countdown-item span {
         font-size: 1.5rem;
+    }* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    .launch-button {
+        width: 100%; /* Full width */
+        padding: 0.6rem; /* Adjusted padding */
+        font-size: 0.9rem;
+        border-radius: 4px;
+
+
+    }
+    .typewriter {
+        font-size: 1rem; /* Reduce font size for better fit */
+        border-right: 2px solid #333;
+        animation: typewriter 3s steps(30, end) forwards;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: max-content;
+    }
+    
+    .launch-container {
+        display: flex;
+        align-items: center;
+        /* padding: 2rem; */
+        gap: 2rem;
+        max-width: 1300px;
+        width: 100%;
+        border-radius: 10px;
+        height: fit-content;
+    }
+    
+    .launch-content {
+        text-align: left;
+        flex: 1;
+        width: 100%;
+        opacity: 0; /* Initial state for fade-in effect */
+        animation: fadeIn 2s forwards;
+    }
+    
+    .launch-video {
+        width: fit-content;
+    }
+    
+    .launch-video video {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .launch-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        animation-delay: 0.5s;
+    }
+    
+    /* Typewriter effect */
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    
+    .typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #333;
+        width: 0;
+        animation: typewriter 4s steps(40, end) forwards;
+    }
+    
 
     .countdown-item p {
         font-size: 0.7rem;
     }
 
     .launch-button {
+        width: 100%;
         padding: 0.6rem;
         font-size: 0.9rem;
+    }
+    .launch-button {
+        width: 100%; /* Full width */
+        padding: 0.6rem; /* Adjusted padding */
+        font-size: 0.9rem;
+        border-radius: 4px;
     }
 
     .stay {
@@ -247,6 +446,10 @@ body {
         font-size: 1.2rem; /* Increase text size below the countdown numbers */
         color: #666;
     }
+    .olerks{
+        width: 150px;
+        margin-bottom: 10px;
+    }
     
 }
 
@@ -265,6 +468,11 @@ body {
     .launch-image {
         order: 1; 
         margin-bottom: 1rem;
+    }
+    .typewriter {
+        font-size: 0.9rem; /* Further reduce font size */
+        border-right: 2px solid #333;
+        animation: typewriter 2.5s steps(20, end) forwards;
     }
 
     .countdown {
@@ -299,7 +507,7 @@ body {
     }
 
     .launch-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .launch-subtext {
@@ -309,6 +517,11 @@ body {
     .launch-button {
         padding: 0.6rem;
         font-size: 0.9rem;
+        width: 100%;
+    }
+    .olerks{
+        width: 120px;
+        margin-bottom: 10px;
     }
 }
 
@@ -338,9 +551,15 @@ body {
     .countdown-item p {
         font-size: 0.5rem;
     }
+    .typewriter {
+        font-size: 0.8rem; /* Smaller font size for very small screens */
+        border-right: 1px solid #333;
+        animation: typewriter 2s steps(15, end) forwards;
+    }
 
     .launch-button {
         padding: 0.4rem;
+        width: 100%;
         font-size: 0.7rem;
     }
     
