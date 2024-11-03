@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Default for larger screens */
+    height: 100vh; 
 }
 
 .launch-container {
@@ -28,14 +28,14 @@ body {
     flex: 1;
 }
 .mobile-title {
-    display: none; /* Hide on desktop */
+    display: none;
 }
 
 .company-name {
     max-width: 100%;
-    width: 35%; /* Default width for larger screens */
+    width: 35%; 
     margin-bottom: 20px;
-    transition: width 0.3s ease; /* Smooth transition for resizing */
+    transition: width 0.3s ease; 
 }
 
 .launch-title {
@@ -46,16 +46,49 @@ body {
 }
 
 .launch-subtext {
-    font-size: 1rem;
-    color: #666;
+    font-size: .9rem;
     margin-bottom: 1rem;
+    background: linear-gradient(to right, #4b1263, #cc00ff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
+
 
 .countdown {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
+.notification-container {
+    display: flex;
+    align-items: center;
+    border: .7px solid #333;
+    border-radius: 15px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    max-width: 400px; 
+    width: 100%; 
+}
+
+.email-input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: .9rem;
+    width: 75%;
+    outline: none;
+}
+
+.email-input:focus {
+    outline: none;
+    /* border: .8px solid #203040;  */
+}
+
+.launch-button {
+    flex-shrink: 0;
+    width: 100%;
+}
+
 
 .stay {
     margin-top: 30px;
@@ -73,15 +106,15 @@ body {
 }
 .launch-button {
     padding: 0.75rem;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: bold;
     color: #ffffff;
     background: linear-gradient(135deg, rgb(203, 40, 203), hsl(300, 100%, 25%));
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
-    max-width: 300px;
+    /* max-width: 600px; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     outline: none;
     text-align: center;
@@ -155,7 +188,7 @@ body {
 }
 
 .launch-video video {
-    width: 100%; /* Ensures the video scales to fit within its container */
+    width: 100%; 
     border-radius: 10px;
 }
 
@@ -166,7 +199,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Animation for Fade-in */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -231,6 +264,8 @@ body {
 
     .launch-subtext {
         font-size: 1rem;
+        margin-bottom: .7rem;
+        margin-top: .7rem;
     }
 
     .countdown {
@@ -245,30 +280,30 @@ body {
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-        padding: 1.5rem; /* Add more padding to the countdown section */
-        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        padding: 1.5rem; 
+        background-color: #f1f1f1; 
         border-radius: 10px;
         margin-bottom: 1rem;
         margin-top: .5rem;
     }
 
     .countdown-item {
-        padding: 1.2rem; /* Increase padding for the countdown items */
+        padding: 1.2rem; 
     }
 
     .countdown-item span {
-        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-size: 2.5rem; 
         font-weight: bold;
         color: #333;
     }
 
     .countdown-item p {
-        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        font-size: 1.2rem;
         color: #666;
     }
     .launch-button {
-        width: 100%; /* Full width */
-        padding: 0.6rem; /* Adjusted padding */
+        width: 100%; 
+        padding: 0.6rem; 
         font-size: 0.9rem;
         border-radius: 4px;
 
@@ -285,11 +320,11 @@ body {
         width: 50%; 
     }
     .desktop-title {
-        display: none; /* Hide on mobile */
+        display: none;
     }
 
     .mobile-title {
-        display: block; /* Show on mobile */
+        display: block; 
     }
 
     .launch-title {
@@ -308,15 +343,15 @@ body {
         box-sizing: border-box;
     }
     .launch-button {
-        width: 100%; /* Full width */
-        padding: 0.6rem; /* Adjusted padding */
+        width: 100%; 
+        padding: 0.6rem; 
         font-size: 0.9rem;
         border-radius: 4px;
 
 
     }
     .typewriter {
-        font-size: 1rem; /* Reduce font size for better fit */
+        font-size: 1rem; 
         border-right: 2px solid #333;
         animation: typewriter 3s steps(30, end) forwards;
     }
@@ -344,7 +379,7 @@ body {
         text-align: left;
         flex: 1;
         width: 100%;
-        opacity: 0; /* Initial state for fade-in effect */
+        opacity: 0; 
         animation: fadeIn 2s forwards;
     }
     
@@ -410,8 +445,8 @@ body {
         font-size: 0.9rem;
     }
     .launch-button {
-        width: 100%; /* Full width */
-        padding: 0.6rem; /* Adjusted padding */
+        width: 100%; 
+        padding: 0.6rem; 
         font-size: 0.9rem;
         border-radius: 4px;
     }
@@ -424,8 +459,8 @@ body {
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-        padding: 1.5rem; /* Add more padding to the countdown section */
-        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        padding: 1.5rem;
+        background-color: #f1f1f1;
         border-radius: 10px;
         margin-bottom: 1rem;
         margin-top: .5rem;
@@ -433,17 +468,17 @@ body {
     }
 
     .countdown-item {
-        padding: 1.2rem; /* Increase padding for the countdown items */
+        padding: 1.2rem; 
     }
 
     .countdown-item span {
-        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-size: 2.5rem; 
         font-weight: bold;
         color: #333;
     }
 
     .countdown-item p {
-        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        font-size: 1.2rem; 
         color: #666;
     }
     .olerks{
@@ -455,7 +490,7 @@ body {
 
 @media (max-width: 480px) {
     body {
-        height: auto; /* Allow height to expand for mobile */
+        height: auto; 
         padding: .3rem;
         flex-direction: column;
     }
@@ -470,7 +505,7 @@ body {
         margin-bottom: 1rem;
     }
     .typewriter {
-        font-size: 0.9rem; /* Further reduce font size */
+        font-size: 0.9rem; 
         border-right: 2px solid #333;
         animation: typewriter 2.5s steps(20, end) forwards;
     }
@@ -480,30 +515,30 @@ body {
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-        padding: 1.5rem; /* Add more padding to the countdown section */
-        background-color: #f1f1f1; /* Optional: Background to highlight the countdown */
+        padding: 1.5rem; 
+        background-color: #f1f1f1; 
         border-radius: 10px;
         margin-top: .5rem;
         margin-bottom: 1rem;
     }
 
     .countdown-item {
-        padding: 1.2rem; /* Increase padding for the countdown items */
+        padding: 1.2rem; 
     }
 
     .countdown-item span {
-        font-size: 2.5rem; /* Make countdown numbers bigger */
+        font-size: 2.5rem; 
         font-weight: bold;
         color: #333;
     }
 
     .countdown-item p {
-        font-size: 1.2rem; /* Increase text size below the countdown numbers */
+        font-size: 1.2rem; 
         color: #666;
     }
 
     .company-name {
-        width: 60%; /* Adjusted for mobile */
+        width: 60%; 
     }
 
     .launch-title {

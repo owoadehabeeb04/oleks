@@ -15,13 +15,12 @@ const countdown = () => {
   const minutes = Math.floor((gap % hour) / minute);
   const seconds = Math.floor((gap % minute) / second);
 
-  // Display the countdown
   document.getElementById("days").innerText = days;
   document.getElementById("hours").innerText = hours;
   document.getElementById("minutes").innerText = minutes;
   document.getElementById("seconds").innerText = seconds;
 
-  // Check if the launch date has passed
+
   if (gap < 0) {
       document.querySelector(".launch-title").innerText = "We're Live!";
       document.querySelector(".countdown").style.display = "none";
@@ -29,5 +28,6 @@ const countdown = () => {
   }
 };
 
-// Update the countdown every second
+
 setInterval(countdown, 1000);
+
