@@ -144,14 +144,14 @@ body {
 .launch-content {
     text-align: left;
     flex: 1;
-    width: 100%; /* Ensures the content takes 50% of the container */
-    opacity: 0; /* Initial state for fade-in effect */
+    width: 100%; 
+    opacity: 0;
     animation: fadeIn 2s forwards;
 }
 
 .launch-video {
     width: 60%;
-    height: max-content; /* Restricts the video to 50% of the container */
+    height: max-content; 
 }
 
 .launch-video video {
